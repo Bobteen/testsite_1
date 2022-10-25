@@ -8,8 +8,9 @@
     <h1>Создать задачу</h1>
     <form method="post">
         {% csrf_token %}
-        <input type="text" placeholder="Введите название" class="form_control"><br>
-        <textarea placeholder="Введите описание" class="form_control"></textarea><br>
+        {{ form.title }}<br>
+        {{ form.task }}<br>
         <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
     </form>
 {% endblock %}
